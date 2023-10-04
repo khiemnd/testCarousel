@@ -1,167 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- [carousel_adtima] -->
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <style>
-    html,body,*{
-      font-family: 'Roboto', sans-serif;
-      margin:0;
-    }
-    .blk-ads{
-      width: 290px;
-      background: #FFFFFF;
-      border: 1px solid #C8D9DF;
-      padding: 8px 4px 6px 8px;
-    }
-    .blk-ads .profile{
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-    }
-    .blk-ads .profile .avatar{
-      width: 36px;
-      height: 36px;
-      margin-right: 4px;
-      border-radius: 50%;
-    }
-    .blk-ads .profile .text h3{
-      margin: 0;
-      margin-bottom: 2px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: normal;
-      color: #000;
-      font-family: 'Roboto', sans-serif;;
-    }
-    .blk-ads .profile .text p{
-      font-weight: 400;
-      font-size: 10px;
-      line-height: normal;
-      color: #778699;
-      margin: 0;
-      font-family: 'Roboto', sans-serif;;
-    }
-    .blk-horizontal{
-      display: flex;
-      overflow-x: auto;
-      max-width: 300px;
-      margin: 0;
-    }
-    .blk-horizontal .item{
-      background: #FFFFFF;
-      overflow: hidden;
-      min-width: 269px;
-      margin: 0 2px 0 0;
-      max-width: 269px;
-      padding-bottom: 8px;
-      display: block;
-      cursor: pointer;
-    }
-    .blk-horizontal .item p{
-      padding-top: 5px;
-      margin: 0;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-    .blk-horizontal .item img {
-      width: 269px;
-      height: 140px;
-      display: block;
-      object-fit: cover;
-      border-radius: 4px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Native Carousel</title>
+    <link rel="stylesheet" type="text/css" href="https://adtima-static.zascdn.me/resource/css/template/template-carousel.230928.1.css">
+    <style>
+        .logo-adtima {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            background-color: #f8f8f8;
+            width: 16px;
+            height: 16px;
+            padding: 2px;
+            border-bottom-left-radius: 4px;
+        }
 
-    .blk-horizontal .item.is-more img{
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-    }
-    .blk-horizontal .item.is-more .logo{
-      width: 261px;
-      height: 140px;
-      border: 1px solid #efefef;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom:8px;
-    }
-    .blk-horizontal .item.is-more .logo p{
-      margin:0 auto;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: normal;
-    }
-    .blk-horizontal .item.is-more .button{
-      width:fit-content;
-      padding: 8px 82px;
-      background-color: #e9e9e9;
-      color:#000;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 14px;
-      text-align: center;
-      
-    }
+        .logo-adtima img {
+            width: 12px;
+            height: 12px;
+            object-fit: contain;
+        }
 
-    .item:active, .item:hover, .item:link, .item:visited {
-      text-decoration-line: none;
-      color:#000;
-    }
-  </style>
+        .hidden-link {
+            display: none !important;
+        }
+
+        .hidden {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden !important;
+            pointer-events: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="blk-ads">
-    <div class="profile">
-      <img class="avatar" src="./images/logo.jpg"/>
-      <div class="text">
-        <h3>Coca cola</h3>
-        <p>Được tài trợ</p>
-      </div>
-    </div>
-    <div class="blk-horizontal">
-
-      <a class="item" href="https://ads.zalo.me/business">
-        <img src="./images/1.jpg"/>
-        <p>Giá sốc với voucher dành cho thương hiệu. Miễn phí từ 0đ cho khách hàng đầu tiên</p>
-      </a>
-
-      <a class="item" href="https://www.google.com">
-        <img src="./images/2.jpg"/>
-        <p>Duy nhất khi đặt hàng qua quảng cáo</p>
-      </a>
-      <a class="item" href="https://www.bing.com">
-        <img src="./images/3.jpg"/>
-        <p>Các mẫu giày mới nhất vừa cập bến</p>
-      </a>
-
-      <a class="item" href="https://www.apple.com/vn/">
-        <img src="./images/4.jpg"/>
-        <p>Đảm bảo hàng phake chất lượng loại 1</p>
-      </a>
-      
-
-      <a class="item is-more" href="https://baomoi.com/">
-        <div class="logo">
-          <img src="./images/logo.jpg" />
-          <p>SSneaker</p>
+    <div class="adsNative-carousel">
+        <div class="context">
+            <a href="http://adtima.vn/" class="logo-adtima">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA5FBMVEVHcEwApf8AAIcAAIcAAIgAAIIAAIYAqv8ApP8ApP8AAIkAAIcAo/8AAIQAs/8AAIgAAIcApP8ApP8ApP8ApP8ApP8ApP8ApP8Apf8ApP8ApP8AAIgApf8AIZoAAIgAAIgAAIgAw/8Ao/8AAIgAAIgAAIkAAHsAAIgAr/8AAIoAx/8Apf8AFIsAAIgAAIMAAHQAr/8Ak9kAAIwAAHEAAHUAAHsAv/8Ar/8AofwAAHcAAHoAAH0AedYAAIcAF4sA1P8AAIEAAHcAr/8AAHgAuf8ApP8AAIgAAIkAof8Apv8AAIEAsf+lVELoAAAARXRSTlMA1SE8E9SnJqOnlqXrWhH+6Aeda/s92rKIfQOOlEoZg8U2YGt2nn7t5/cMuGjZt7WCMcthGJIeo9YPvgw+8CjIojaINVwQmjcEAAAAtklEQVQYGZXA1XLCABRF0Q0kJMHr7u7uLvfctP3//+lAyCAPzLAYabWyU2LY9t7BLkO2pN9jBhUlP+OwQb+qy6+JjuhTaspv4DzdpOdEaj1xm1ptkVxd8jrcmdkCXUFLCuH5z8ymIzIVyb/g3trm6ChK/g7fP9YxQ9up1PygUbNMYQJYkRTCp+WmgLJLj1CwXAIsSXp54C21rkkgWJc8fL3Yt8xsBBCslauXV2wsJ3EcJ/MRY/gH++MlWpbjGPIAAAAASUVORK5CYII=" height="12" width="12">
+            </a>
+            <div class="bl-info">
+                <div class="avatar" style="background-image:url(##oa_avatar##)"></div>
+                <div class="content">
+                    <h1 class="title">##oa_name##</h1>
+                    <span class="sponsor">Được tài trợ</span>
+                </div>
+            </div>
+            <div class="bl-desc">##caption##</div>
+            <div class="bl-swiper">
+                <div id="nativeCarousel" class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a id="SZVutmDlTq"
+                                href="##clickUrl1##"
+                                data-inview="##imgView1##"
+                                target="_blank">
+                                <div class="slide-image" style="background-image: url(##image1##)"></div>
+                                <div class="slide-caption">##caption1##</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a id="oQNPBBjXtS"
+                                href="##clickUrl2##"
+                                data-inview="##imgView2##"
+                                target="_blank">
+                                <div class="slide-image" style="background-image: url(##image2##)"></div>
+                                <div class="slide-caption">##caption2##</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a id="UeQZoksEhO"
+                                href="##clickUrl3##"
+                                data-inview="##imgView3##"
+                                target="_blank">
+                                <div class="slide-image" style="background-image: url(##image3##)"></div>
+                                <div class="slide-caption">##caption3##</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a id="yZDmEBDxHa"
+                                href="##clickUrl4##"
+                                data-inview="##imgView4##"
+                                target="_blank">
+                                <div class="slide-image" style="background-image: url(##image4##)"></div>
+                                <div class="slide-caption">##caption4##</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a id="zWaTwmOTKz"
+                                href="##clickUrl5##"
+                                data-inview="##imgView5##"
+                                target="_blank">
+                                <div class="slide-image brand">
+                                    <div class="logo" style="background-image: url(##oa_avatar##)"></div>
+                                    <div class="name">##oa_name##</div>
+                                </div>
+                                <div class="slide-caption">##action##</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev" data-cta="false"></div>
+                    <div class="swiper-button-next" data-cta="false"></div>
+                </div>
+                <script>
+                    window.carouselConfig = { 
+                    container: '#nativeCarousel', 
+                    slide: '#nativeCarousel .swiper-slide', 
+                    options: { navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } },
+                    noSwiping: true,
+                    noSwipingClass: 'swiper-slide',
+                    simulateTouch: false,
+                    allowTouchMove: false
+                }</script>
+                <script src="https://adtima-static.zascdn.me/resource/plugins/swiper-bundle.min.js"></script>
+                <script src="https://adtima-static.zascdn.me/resource/js/ext/carousel.230928.1.js"></script>
+            </div>
+            <div class="bl-action">
+                <a class="btn btn-cta btn-action-0 btn" href="zads://action_target" target="_blank">##action##</a>
+            </div>
         </div>
-        <p >Khám phá ngay</p>
-      </a>
-
-  </div>
-
+    </div>
+    <div class="hidden">
+        <a id="trackingLink" class="hidden-link" href="zads://action_target" target="_blank"></a>
+        <img src="##impressionUrl##" width="1" height="1">
+    </div>
+    <script>
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('a[href], a[href] *')) {
+                return true;
+            } else if (!e.target.closest('[data-cta="false"], [data-cta="false"] *')) {
+                var lh = document.getElementById('trackingLink');
+                lh && lh.click();
+            }
+        });
+    </script>
 </body>
+
 </html>
