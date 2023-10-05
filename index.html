@@ -63,7 +63,7 @@
                             <a id="SZVutmDlTq"
                                 href="##clickUrl1##"
                                 data-inview="##imgView1##"
-                                target="_blank">
+                                onclick="openNewTab(event)">
                                 <div class="slide-image" style="background-image: url(##image1##)"></div>
                                 <div class="slide-caption">##caption1##</div>
                             </a>
@@ -121,6 +121,14 @@
                     simulateTouch: false,
                     allowTouchMove: false
                 }</script>
+                <script>
+function openNewTab(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+    var href = event.currentTarget.getAttribute('href'); // Lấy đường dẫn từ thuộc tính href của liên kết
+    window.open(href, '_blank'); // Mở cửa sổ mới với đường dẫn đã lấy
+}
+</script>
                 <script src="https://adtima-static.zascdn.me/resource/plugins/swiper-bundle.min.js"></script>
                 <script src="https://adtima-static.zascdn.me/resource/js/ext/carousel.230928.1.js"></script>
             </div>
